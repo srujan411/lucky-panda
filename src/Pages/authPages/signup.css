@@ -1,0 +1,28 @@
+
+.signup {
+    margin: 1rem auto;
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(to left, darkblue, darkorchid);
+    padding-bottom: 1rem;
+    width: 70%;
+    box-shadow: 7px 10px 20px rgb(176, 173, 173);
+  }
+  
+  .signup input {
+    font-size: medium;
+    margin: 20px;
+    padding: 0.5rem 5rem;
+    border-radius: 15px;
+  }
+  
+  .signup button {
+    border: none;
+    background-color: black;
+    color: aliceblue;
+    font-size: medium;
+    cursor: pointer;
+  }
+  
+  

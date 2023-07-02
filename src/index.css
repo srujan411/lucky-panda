@@ -1,13 +1,180 @@
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
-  }
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: aliceblue;
+  background-color: black;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.homepage {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.homepage .post {
+  padding: 1rem 1rem;
+  /*border: 2px solid grey;*/
+}
+
+.Bookmarks .posts{
+  padding: 1rem 3rem;
+}
+
+.container{
+  padding-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.navlink {
+  display: grid;
+  grid-template-columns: 1;
+}
+.navlink .link {
+  color: aliceblue;
+  margin: 2rem -1rem 0 10rem;
+  color: "black";
+  text-decoration: none;
+  text-align: left;
+}
+
+.avatar {
+  object-fit: cover;
+  image-rendering: optimizeQuality;
+  image-resolution: 300dpi;
+  max-height: 50px;
+  min-width: 50px;
+  border-radius: 90%;
+}
+.userCard .avatar {
+  margin-top: 10px;
+}
+
+.userCard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.followButton:hover {
+  color: rgb(10, 154, 154);
+}
+
+.Homepage .post {
+  padding: 1rem;
+}
+
+.post .userCard img {
+  margin-bottom: -2rem;
+}
+
+.post .content {
+  padding: 10px;
+  background-color:black;
+  text-align: left;
+  /* border:2px solid limegreen;
+  border-image: radial-gradient( red, darkblue, darkorchid) 1; */
+  border-radius: 25px;
+}
+
+.userProfileAvatar {
+  border-radius: 50%;
+  max-height: 150px;
+  min-width: 150px;
+  object-fit: cover;
+}
+#userProfile {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-top: 2rem;
+}
+
+.userCard {
+  font-size: 12px;
+}
+
+.userListing {
+  /*border: 2px solid grey;*/
+  max-width: 55%;
+}
+.postImg {
+  background-color: black;
+  object-fit:cover;
+  max-height: 30rem;
+  min-width: 25.7rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#userProfile .post {
+  padding: 1rem 1rem;
+}
+
+.icons{
+  font-size:x-large;
+}
+
+/*scroll bar/////////////////////////////////////////////////////////////////////////////////////*/
+body::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 100px;
+}
+
+body::-webkit-scrollbar-track {
+  background:  linear-gradient(10deg  , darkblue, darkorchid 100%);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: transparent; /* opacity: 0; should do the thing either */
+  box-shadow: 0px 0px 0px 100000vh black;
+}
+
+.explore .post{
+  padding: 1rem 1rem;
+}
+
+.sortingButton{
+  background-color: black;
+  border: none;
+  color: aliceblue;
+  cursor: pointer;
+}
+.toast-notification{
+  color: #fff;
+  width: 250px;
+}
+
+.input {
+  border-top-style: none;
+  margin-left: 2rem;
+  color: #8707ff;
+  border: 2px solid #8707ff;
+  border-radius: 10px;
+  padding: 10px 25px;
+  background: transparent;
+  max-width: 190px;
+ }
+ .textarea{
+  margin-left: -1rem;
+  color: #8707ff;
+  border: 2px solid #8707ff;
+  border-radius: 10px;
+  background: transparent;
+ }
+
+ .textarea:active{
+  box-shadow: 2px 2px 15px #8707ff inset;
+ }
+ 
+ .input:active {
+  box-shadow: 2px 2px 15px #8707ff inset;
+ }
+ 
