@@ -28,13 +28,41 @@ export default function Navbar() {
           }
         />
         <Route path="/profile" element={<ProfilePage />} />
-        <Route path="/saved" element={<BookMark />} />
-        <Route path="/explore" element={<ExplorePage />} />
+        <Route
+          path="/saved"
+          element={
+            <AuthRequired>
+              <BookMark />
+            </AuthRequired>
+          }
+        />
+        <Route
+          path="/explore"
+          element={
+            <AuthRequired>
+              <ExplorePage />
+            </AuthRequired>
+          }
+        />
         <Route path="/mockman" element={<Mockman />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/users/:userId" element={<SingleUsers />} />
-        <Route path="/posts/:postId" element={<SinglePost />} />
-        <Route path="/sample" element={<PopupEdits/>}/>
+        <Route
+          path="/users/:userId"
+          element={
+            <AuthRequired>
+              <SingleUsers />
+            </AuthRequired>
+          }
+        />
+        <Route
+          path="/posts/:postId"
+          element={
+            <AuthRequired>
+              <SinglePost />
+            </AuthRequired>
+          }
+        />
+        <Route path="/sample" element={<PopupEdits />} />
       </Routes>
     </>
   );

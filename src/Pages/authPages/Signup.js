@@ -86,7 +86,7 @@ export default function Signup() {
         <button disabled={confirmPass} onClick={clickHandler}>
           Register
         </button>/
-        <button><Link to="/" style={{textDecoration:"none",color:"aliceblue"}}>Sign-in</Link></button>
+        <button><Link to="/signin" style={{textDecoration:"none",color:"aliceblue"}}>Sign-in</Link></button>
       </div>
     </div>
   );

@@ -42,7 +42,7 @@ export default function Signin() {
           <br />
           <input
             type="password"
-            placeholder="*******"
+            placeholder="***********"
             onChange={(e) => passwordhandler(e)}
           />
           <br />

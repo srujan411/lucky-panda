@@ -1,22 +1,33 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { GoHomeFill } from "react-icons/go";
+import { AiOutlineLogout } from "react-icons/ai";
 import { BiCompass, BiBookmarks } from "react-icons/bi";
-import logo from "../logo-no-background.png"
+import logo from "../logo-no-background.png";
 
 import { DataContext } from "../ContextProvider/DataProvider";
 
 export default function NavLinks() {
   const { state } = useContext(DataContext);
   const getActiveStyle = ({ isActive }) => ({
-    textDecoration: isActive?"none":"none",
+    textDecoration: isActive ? "none" : "none",
     fontWeight: isActive ? "700" : "300",
   });
   const currentUser = state.currentUser;
+
+  const logOut = () => {
+    localStorage.clear();
+  };
+
   return (
     <div>
       <Link to="/">
-      <img src={logo} alt="logo" style={{ maxHeight: "100px", objectFit:"fill" }} /></Link>
+        <img
+          src={logo}
+          alt="logo"
+          style={{ maxHeight: "100px", objectFit: "fill" }}
+        />
+      </Link>
       <nav className="navlink">
         <NavLink className="link" style={getActiveStyle} to="/">
           <GoHomeFill
@@ -46,6 +57,26 @@ export default function NavLinks() {
           <span style={{ margin: "0 1rem" }}>
             @{currentUser.username} <br />
           </span>
+          <br />
+          <br />
+          <br />
+          <button
+            style={{
+              width: "30%",
+              border: "2px solid white",
+              borderRadius: "10px",
+              backgroundColor: "black",
+            }}
+            onClick={logOut}
+          >
+            <Link
+              style={{ textDecoration: "none", color: "aliceblue" }}
+              to="/signin"
+            >
+              <AiOutlineLogout size={15} style={{marginBottom:"-3px"}}/>
+              Logout
+            </Link>
+          </button>
         </NavLink>
       </nav>
     </div>
