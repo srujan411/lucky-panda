@@ -43,21 +43,23 @@ export function AuthProvider({ children }) {
     }
   };
   const SignUpHandler = async (userDetails) => {
-    const { full_name, user_name, email_address, pass_word, avatar } = userDetails;
+    const { full_name, user_name, email_address, pass_word, useravatar } =
+      userDetails;
+      console.log(full_name)
     try {
       const {
         status,
         data: { createdUser, encodedToken },
       } = await axios.post(`/api/auth/signup`, {
-        avatar:avatar,
-        bio:"add a bio",
-        website:"add a website",
-        fullname: full_name,
+        avatar: useravatar,
+        bio: "add a bio",
+        website: "add a website",
+        fullName: full_name,
         username: user_name,
         email: email_address,
         password: pass_word,
       });
-      console.log(createdUser)
+      console.log(createdUser);
       if (status === 200 || status === 201) {
         localStorage.setItem(
           "loginDetails",

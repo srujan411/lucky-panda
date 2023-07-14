@@ -28,7 +28,7 @@ export default function ProfilePage() {
       </div>
       <div>
         <img src={avatar} alt={username} className="userProfileAvatar" />
-        <h3>{`${fullName}`}</h3>
+        <h3>{console.log(fullName)}</h3>
         <p>@{username} <a href={website} target="_blank">
             <FiExternalLink />
           </a></p>

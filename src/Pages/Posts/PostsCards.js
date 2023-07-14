@@ -191,7 +191,7 @@ export default function PostCards({ props }) {
             style={{ cursor: "pointer" }}
           />
         )}{" "}
-        <BiComment className="icons" style={{ cursor: "pointer" }} />{" "}
+        {/* <BiComment className="icons" style={{ cursor: "pointer" }} />{" "} */}
         {state?.bookMarkedData?.filter((item) => item._id === _id).length !==
         1 ? (
           <BsBookmark

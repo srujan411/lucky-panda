@@ -9,7 +9,7 @@ export default function Signup() {
   const { SignUpHandler } = useContext(AuthContext);
   const [confirmPass, setConfirmPass] = useState(false);
   const [userDetails, setUserDetails] = useState({
-    avatar: "",
+    useravatar: "",
     full_name: "",
     user_name: "",
     email_address: "",
@@ -17,10 +17,11 @@ export default function Signup() {
   });
 
   const avatarHandler = (userAvatar) => {
-    setUserDetails({ ...userDetails, avatar: userAvatar });
+    setUserDetails({ ...userDetails, useravatar: userAvatar });
   };
 
   const fullnameHandler = (e) => {
+    console.log(e.target.value)
     setUserDetails({ ...userDetails, full_name: e.target.value });
   };
   const usernameHandler = (e) => {
@@ -40,14 +41,13 @@ export default function Signup() {
   const clickHandler = () => {
     SignUpHandler(userDetails);
   };
-  console.log(userDetails);
 
   return (
     <div className="signup">
-       <h2>
-          <img src={img} alt="logo" style={{ maxHeight: "150px" }} />
-        </h2>
-        <h2>Sign-Up</h2>
+      <h2>
+        <img src={img} alt="logo" style={{ maxHeight: "150px" }} />
+      </h2>
+      <h2>Sign-Up</h2>
       <div>
         <UserAvatar props={{ avatarHandler }} />
         <br />
@@ -56,19 +56,17 @@ export default function Signup() {
           onChange={(e) => fullnameHandler(e)}
           placeholder="John Doe"
         />
-        <br/>
+        <br />
         <input
           type="text"
           onChange={(e) => usernameHandler(e)}
           placeholder="username"
         />
-        
         <input
           type="email"
           onChange={(e) => emailHandler(e)}
           placeholder="john@doe.com"
         />
-        
         <input
           type="password"
           onChange={(e) => passwordHandler(e)}
@@ -85,8 +83,16 @@ export default function Signup() {
         <br />
         <button disabled={confirmPass} onClick={clickHandler}>
           Register
-        </button>/
-        <button><Link to="/signin" style={{textDecoration:"none",color:"aliceblue"}}>Sign-in</Link></button>
+        </button>
+        /
+        <button>
+          <Link
+            to="/signin"
+            style={{ textDecoration: "none", color: "aliceblue" }}
+          >
+            Sign-in
+          </Link>
+        </button>
       </div>
     </div>
   );
