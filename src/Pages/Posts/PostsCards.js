@@ -133,7 +133,7 @@ export default function PostCards({ props }) {
   return (
     <div className="post">
       <div style={{ paddingTop: "20px" }} className="userCard">
-        <img src={avatar} alt={username} className="avatar" />
+        <img src={avatar ?? "https://www.freepik.com/free-photos-vectors/user-profile"} alt={username} className="avatar" />
       </div>
       <div
         className="username"

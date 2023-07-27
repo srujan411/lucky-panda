@@ -51,7 +51,7 @@ export function AuthProvider({ children }) {
         status,
         data: { createdUser, encodedToken },
       } = await axios.post(`/api/auth/signup`, {
-        avatar: useravatar,
+        avatar: "https://www.freepik.com/free-photos-vectors/user-profile",
         bio: "add a bio",
         website: "add a website",
         fullName: full_name,
